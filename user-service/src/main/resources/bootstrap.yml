@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: user-service
+  cloud:
+    config:
+      uri: 
+        - http://localhost:9000
+management:
+  endpoint:
+    hystrix:
+      stream:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+        - hystrix.stream
